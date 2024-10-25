@@ -2,7 +2,10 @@ package com.bookjournal.proyecto.Controllers;
 
 import com.bookjournal.proyecto.Services.BookService;
 import com.bookjournal.proyecto.entities.Book;
+import com.bookjournal.proyecto.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,12 +20,21 @@ public class BookController {
     public List<Book> getBooksByUserId(@PathVariable Long userId){
         return bookService.getBooksByUserId(userId);
     }
+    @Autowired
+    private BookRepository bookRepository;
 
-    @PostMapping
-    public Book createBook(@RequestBody Book book){
-        System.out.println("Creating book: " + book);
-        return bookService.createBook(book);
+    @PostMapping("/create")
+    public ResponseEntity<Book> createBook(@RequestBody Book book) {
+        try {
+            Book savedBook = bookRepository.save(book);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedBook);
+        } catch (Exception e) {
+            // Loguear el error y retornar un código de error adecuado
+            System.out.println("Error al crear el libro: " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
+
 
 
     @GetMapping("/")
