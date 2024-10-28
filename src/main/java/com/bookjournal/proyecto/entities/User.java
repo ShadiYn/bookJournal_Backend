@@ -23,8 +23,8 @@ public class User {
     private String password;
     private Date createdAt;
 
-    @JsonManagedReference
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user")
+    @JsonManagedReference // Maneja la referencia del lado "uno"
     private List<Book> books;
 
     public Long getId() {
