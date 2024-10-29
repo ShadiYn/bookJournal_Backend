@@ -65,7 +65,7 @@ public class BookController {
         // Guardar la imagen
         try {
             String imagePath = saveImage(file);
-            book.setImagePath(imagePath); // Asegúrate de que Book tenga el campo imagePath
+            book.setImagePath(imagePath);
 
             // Guarda el libro en la base de datos
             bookRepository.save(book); // Guarda el libro después de establecer la imagen
@@ -92,11 +92,11 @@ public class BookController {
     }
 
     private String saveImage(MultipartFile file) throws IOException {
-        // Generar un nombre único para la imagen
+
         String imageName = System.currentTimeMillis() + "_" + file.getOriginalFilename();
         Path path = root.resolve(imageName); // Usar la ruta definida al inicio
         Files.copy(file.getInputStream(), path, StandardCopyOption.REPLACE_EXISTING);
-        return imageName; // Solo retornar el nombre de la imagen
+        return imageName;
     }
 
 
