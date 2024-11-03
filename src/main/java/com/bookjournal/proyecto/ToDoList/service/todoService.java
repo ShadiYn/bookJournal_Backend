@@ -1,8 +1,7 @@
-package com.bookjournal.proyecto.ToDoList;
+package com.bookjournal.proyecto.ToDoList.service;
 
 
-import com.bookjournal.proyecto.ToDoList.to_do;
-import com.bookjournal.proyecto.ToDoList.todoRepository;
+import com.bookjournal.proyecto.ToDoList.entities.to_do;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import java.util.Optional;
 public class todoService {
 
     @Autowired
-    private todoRepository todoRepository;
+    private com.bookjournal.proyecto.ToDoList.repository.todoRepository todoRepository;
 
     public List<to_do> getAllTodos() {
         return todoRepository.findAll();

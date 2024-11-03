@@ -1,13 +1,13 @@
-package com.bookjournal.proyecto.Controllers;
+package com.bookjournal.proyecto.bookJournal.Controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.bookjournal.proyecto.entities.Book;
-import com.bookjournal.proyecto.Services.BookService;
-import com.bookjournal.proyecto.repositories.BookRepository;
+import com.bookjournal.proyecto.bookJournal.Controllers.entities.Book;
+import com.bookjournal.proyecto.bookJournal.Controllers.Services.BookService;
+import com.bookjournal.proyecto.bookJournal.Controllers.repositories.BookRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

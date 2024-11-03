@@ -1,4 +1,4 @@
-package com.bookjournal.proyecto.entities;
+package com.bookjournal.proyecto.bookJournal.Controllers.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;

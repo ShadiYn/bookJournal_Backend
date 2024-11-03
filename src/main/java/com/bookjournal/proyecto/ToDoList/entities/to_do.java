@@ -1,4 +1,4 @@
-package com.bookjournal.proyecto.ToDoList;
+package com.bookjournal.proyecto.ToDoList.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

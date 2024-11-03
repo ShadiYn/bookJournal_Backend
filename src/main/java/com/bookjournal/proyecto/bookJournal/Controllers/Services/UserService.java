@@ -1,7 +1,7 @@
-package com.bookjournal.proyecto.Services;
+package com.bookjournal.proyecto.bookJournal.Controllers.Services;
 
-import com.bookjournal.proyecto.entities.User;
-import com.bookjournal.proyecto.repositories.UserRepository;
+import com.bookjournal.proyecto.bookJournal.Controllers.entities.User;
+import com.bookjournal.proyecto.bookJournal.Controllers.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

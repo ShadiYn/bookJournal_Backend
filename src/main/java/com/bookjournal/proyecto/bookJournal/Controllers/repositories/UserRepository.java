@@ -1,6 +1,6 @@
-package com.bookjournal.proyecto.repositories;
+package com.bookjournal.proyecto.bookJournal.Controllers.repositories;
 
-import com.bookjournal.proyecto.entities.User;
+import com.bookjournal.proyecto.bookJournal.Controllers.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

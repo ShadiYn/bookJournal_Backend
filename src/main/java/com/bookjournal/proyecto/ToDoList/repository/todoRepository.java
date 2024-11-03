@@ -1,9 +1,7 @@
-package com.bookjournal.proyecto.ToDoList;
+package com.bookjournal.proyecto.ToDoList.repository;
 
-import com.bookjournal.proyecto.entities.Book;
+import com.bookjournal.proyecto.ToDoList.entities.to_do;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
 
 public interface todoRepository extends JpaRepository<to_do, Long> {
 }

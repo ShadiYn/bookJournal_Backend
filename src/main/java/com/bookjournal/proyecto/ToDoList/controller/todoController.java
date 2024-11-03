@@ -1,8 +1,7 @@
-package com.bookjournal.proyecto.ToDoList;
+package com.bookjournal.proyecto.ToDoList.controller;
 
 
-import com.bookjournal.proyecto.ToDoList.to_do;
-import com.bookjournal.proyecto.ToDoList.todoService;
+import com.bookjournal.proyecto.ToDoList.entities.to_do;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,7 @@ import java.util.List;
 public class todoController {
 
     @Autowired
-    private todoService todoService;
+    private com.bookjournal.proyecto.ToDoList.service.todoService todoService;
 
     @GetMapping
     public List<to_do> getAllTodos() {

@@ -1,8 +1,7 @@
-package com.bookjournal.proyecto.Controllers;
+package com.bookjournal.proyecto.bookJournal.Controllers;
 
-import com.bookjournal.proyecto.Services.BookService;
-import com.bookjournal.proyecto.Services.UserService;
-import com.bookjournal.proyecto.entities.User;
+import com.bookjournal.proyecto.bookJournal.Controllers.Services.UserService;
+import com.bookjournal.proyecto.bookJournal.Controllers.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
