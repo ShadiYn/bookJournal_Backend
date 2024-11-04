@@ -12,7 +12,7 @@ import java.util.List;
 // MensajeRepository.java
 @Repository
 public interface MensajeRepository extends JpaRepository<Mensaje, Long> {
-    List<Mensaje> findByRemitenteIdOrDestinatarioId(Long remitenteId, Long destinatarioId);
+    List<Mensaje> findByRemitenteIdOrDestinatario_Id(Long remitenteId, Long destinatarioId);
 
 
 

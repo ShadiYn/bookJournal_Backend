@@ -16,14 +16,15 @@ public class Mensaje {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "remitente_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "remitente_id")
     private Usuario remitente;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "destinatario_id", nullable = false)
-    @JsonIgnoreProperties({"mensajesEnviados", "mensajesRecibidos"})
+    @ManyToOne
+    @JoinColumn(name = "destinatario_id")
     private Usuario destinatario;
+
+
 
     private String texto;
 
@@ -36,7 +37,7 @@ public class Mensaje {
         return remitente != null ? remitente.getNombre() : null; // Retorna el nombre del remitente
     }
 
-    public Integer getDestinatarioId() {
+    public Long getDestinatarioId() {
         return destinatario != null ? destinatario.getId() : null; // Retorna el ID del destinatario
     }
 

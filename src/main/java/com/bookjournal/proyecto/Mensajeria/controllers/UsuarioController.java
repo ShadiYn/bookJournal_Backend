@@ -22,9 +22,9 @@ public class UsuarioController {
             Usuario newUsuario = new Usuario();
             newUsuario.setNombre(nombre);
             Usuario u2 = usuarioRepository.save(newUsuario);
-            return u2.getId();
+            return Math.toIntExact(u2.getId());
         }
-        return u.getId();
+        return Math.toIntExact(u.getId());
     }
 
     @GetMapping
