@@ -3,11 +3,12 @@ package com.bookjournal.proyecto.Mensajeria.controllers;
 import com.bookjournal.proyecto.Mensajeria.Entities.Usuario;
 import com.bookjournal.proyecto.Mensajeria.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
+@RestController
+@RequestMapping("user")
 public class UsuarioController {
 
     @Autowired

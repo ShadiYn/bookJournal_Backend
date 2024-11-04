@@ -12,19 +12,17 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
-    public List<Book> getBooksByUserId(Long userId){
-        return bookRepository.findByUserId(userId);
-    }
+    // Método eliminado: getBooksByUserId
 
     public Book createBook(Book book) {
-        return bookRepository.save(book); // Solo guarda una vez
+        return bookRepository.save(book);
     }
 
-    public void deleteBook(Long bookId){
+    public void deleteBook(Long bookId) {
         bookRepository.deleteById(bookId);
     }
 
     public List<Book> getAllBooks() {
-        return bookRepository.findAll(); // Devuelve todos los usuarios
+        return bookRepository.findAll(); // Devuelve todos los libros
     }
 }

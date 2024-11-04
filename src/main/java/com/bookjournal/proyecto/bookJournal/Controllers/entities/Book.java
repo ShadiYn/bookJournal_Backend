@@ -27,9 +27,9 @@ public class Book {
     @Column(name = "image_path")
     private String imagePath; // Campo para almacenar el nombre o URL de la imagen
 
-    @ManyToOne
-    @JsonBackReference // Evita referencia cíclica
-    private User user;
+
+
+
 
     public int getId() {
         return id;
@@ -95,13 +95,6 @@ public class Book {
         this.imagePath = imageUrl;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public String getImagePath() {
         return imagePath;

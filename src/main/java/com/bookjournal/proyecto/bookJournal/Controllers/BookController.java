@@ -41,10 +41,6 @@ public class BookController {
         }
     }
 
-    @GetMapping("/user/{userId}")
-    public List<Book> getBooksByUserId(@PathVariable Long userId) {
-        return bookService.getBooksByUserId(userId);
-    }
 
     @GetMapping("/")
     public List<Book> getAllUsers() {
@@ -67,8 +63,8 @@ public class BookController {
             String imagePath = saveImage(file);
             book.setImagePath(imagePath);
 
-            // Guarda el libro en la base de datos
-            bookRepository.save(book); // Guarda el libro después de establecer la imagen
+            // Guarda el libro en la base de datos, incluso sin usuario asociado
+            bookRepository.save(book);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar la imagen.");
         }

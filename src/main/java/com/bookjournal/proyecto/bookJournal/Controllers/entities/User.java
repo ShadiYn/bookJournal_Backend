@@ -23,9 +23,7 @@ public class User {
     private String password;
     private Date createdAt;
 
-    @OneToMany(mappedBy = "user")
-    @JsonManagedReference // Maneja la referencia del lado "uno"
-    private List<Book> books;
+
 
     public Long getId() {
         return id;
@@ -67,11 +65,4 @@ public class User {
         this.createdAt = createdAt;
     }
 
-    public List<Book> getBooks() {
-        return books;
     }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
-}
