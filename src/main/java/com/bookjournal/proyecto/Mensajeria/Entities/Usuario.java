@@ -22,10 +22,18 @@ public class Usuario {
     private Long id;
 
     private String nombre;
-
+    private String contraseña;
     @OneToMany(mappedBy = "remitente", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JsonIgnore // Esto previene la serialización de mensajesEnviados en Usuario
     private List<Mensaje> mensajesEnviados;
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
 
     @OneToMany(mappedBy = "destinatario", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JsonIgnore // Esto previene la serialización de mensajesRecibidos en Usuario
